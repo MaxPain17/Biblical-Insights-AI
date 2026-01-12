@@ -1,0 +1,100 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblical Insights AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/heroicons/2.1.3/24/outline/heroicons.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'primary': '#111827', // Gray 900
+              'secondary': '#1F2937', // Gray 800
+              'accent': '#8B5CF6', // Violet 500
+              'accent-light': '#A78BFA', // Violet 400
+              'secondary-accent': '#22D3EE', // Cyan 400
+              'text-main': '#E5E7EB', // Gray 200
+              'text-muted': '#9CA3AF', // Gray 400
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #4B5563; /* Gray 600 */
+        border-radius: 20px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: #6D28D9; /* Violet 700, a darker accent */
+      }
+       @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.5s ease-out forwards;
+      }
+      @keyframes pulse-group-target {
+        0%, 100% {
+          box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.4), 0 0 10px rgba(139, 92, 246, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.7), 0 0 15px rgba(139, 92, 246, 0.4);
+        }
+      }
+      .group-target-glow {
+        animation: pulse-group-target 1.5s infinite ease-in-out;
+      }
+      @keyframes pulse-add-to-group {
+        0%, 100% {
+          box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.4), 0 0 10px rgba(34, 211, 238, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.7), 0 0 15px rgba(34, 211, 238, 0.4);
+        }
+      }
+      .add-to-group-glow {
+        animation: pulse-add-to-group 1.5s infinite ease-in-out;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "docx": "https://esm.sh/docx@^8.5.0",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3",
+    "lodash-es": "https://esm.sh/lodash-es@4.17.21"
+  }
+}
+</script>
+</head>
+  <body class="bg-primary text-text-main">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
